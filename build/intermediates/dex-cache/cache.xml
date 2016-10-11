@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_0324f02a4a35bb975022cfc062d2f44ef5a5dbd0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_a397ae4fa430ed82dab0309ef8b03a4840429c29\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d6708863eb428461d7691d04d21a418765b7405a">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b832f0756def6d96d65c59b0700a1251ba1eda0f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_659d8e178eb410c14e2ec9703f87e45f328f33c5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_9a4e56ab5579377555b39beb8817f01e55fd7bd2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_c52381c35cf23297ec7332d5c43c96e8a0e12c9e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_541e2c2b9f11800b0e73efa38b5fdff9a5e6297a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_bd66df29fbc224191967ba52161002c4a3b0d296\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_de33333a25a3961a7e012a5103aeadc26033e4ba\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\HP\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_8dac1c1bfbb9914d919b6b05b59fb113929ed402\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\HP\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.5.2_71213672e948e1ded945112dbe899a7d05ecdd4a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_bb6ca3b9c7dbfc37794961a0d8841f3a62b92694\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_a4577512ea607e77a5591a03ef29130453c41ecc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_bad238bbf0ea4262d6989dfccb66317807b89281\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_e3bb47c50266fc1d2e19b7f2329d01c6578ed457\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\libs\android-async-http-1.4.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\2\android-async-http-1.4.9_c3d77e988383254121c959917c538d5438862f3f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_18f8666e9ea919e710fbebdbd1d7698717edc918\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_dbb4504372b9b3fe7a5779b270e16563ab0299ed\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_acd0676674b0779adf8bfd470d22c30c35095ad2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\HP\.gradle\caches\modules-2\files-2.1\cz.msebera.android\httpclient\4.3.6\526a9f794eab830eae4f23a62c572878b3f491ab\httpclient-4.3.6.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\httpclient-4.3.6_7d13bf93e41b2469c113c11362638c8ddfc19651\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="45371e89dad5d892cc8538c898582ccd4c132b79">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_e9127b58bbfe6c1784adb086c21eb65c82a9219f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_a7ea62cdab5944318488a2a47b6a8cf388a57020\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\ap_uais\UAIS\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
+        <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-24.2.1_48348927df85a78e92c3da2f978328b348a52b8f\classes.dex" />
+    </item>
+
+</items>
