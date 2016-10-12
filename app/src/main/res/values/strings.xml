@@ -73,5 +73,6 @@
     <string name="no_fileMod">Error</string>
     <string name="no_fileMod_sms">No file Chosen or Module. Please choose a module and file(s)</string>
     <string name="notification_icon_at_notification_bar_for_uploading_progress">notification icon at notification bar for uploading progress</string>
+    <string name="notification_ticker">Uploading...</string>
 
 </resources>

@@ -67,7 +67,7 @@ public class ExpandableAssignmentFragment extends Fragment
             public void onRecyclerViewItemClicked(int position, int id, String text) {
                 DownloadFile df = new DownloadFile(getContext());
                 if(DownloadFile.isDownloadManagerAvailable()){
-                    df.queueFileForDownload("http://liziio0aq-site.1tempurl.com/uploads/assignment/" + text, text, "View Assignment", "New Material");
+                    df.queueFileForDownload("http://liziio0aq-site.1tempurl.com/uploads/assignment/" + text, text, text, "Download in progress");
                     Log.d("downloading", "file: " + text + " AssignmentFragment");
 
                     Toast.makeText(getContext(), "Downloading...", Toast.LENGTH_SHORT).show();

@@ -63,7 +63,8 @@ public class AcademicFragment extends Fragment implements FilePickerCallback {
     RelativeLayout container_spinner,progress_spinner;
     // flag for Network connection status
     Boolean isNetworkPresent = false;
-    ArrayList<String> spinnerData,filePath,filename;
+    ArrayList<String> spinnerData;
+    ArrayList<ChosenFile> file_;
     String module_title;
 
     private FilePicker filePicker;
@@ -118,7 +119,7 @@ public class AcademicFragment extends Fragment implements FilePickerCallback {
             public void onClick(View v) {
                 String error_sms = null;
                 try {
-                    filePath.isEmpty();
+                    file_.isEmpty();
                 }catch(NullPointerException e){
                     e.printStackTrace();
                     error_sms = e.getMessage();
@@ -126,12 +127,18 @@ public class AcademicFragment extends Fragment implements FilePickerCallback {
                 if (module_title == null || error_sms != null) {
                     showAlertDialog(getContext(),getResources().getString(R.string.no_fileMod),getResources().getString(R.string.no_fileMod_sms),false);
                 }else{
-                    /*for(int i=0;i<filePath.size();i++) {
-                        Log.d("data", " module: " + module_title + " filePath: " + filePath.get(i) + " filename: " + filename.get(i));
-                    }*/
-                    uploadFilesAsync(filePath);
-                    setDataToAdapter(null);  //set empty data to adapter after sending data
-                    module_title = null; //set empty data to selection module
+                    if(file_.isEmpty()){
+                        showAlertDialog(getContext(),getResources().getString(R.string.no_fileMod),getResources().getString(R.string.no_fileMod_sms),false);
+                    }else{
+                        Log.d(TAG," : "+file_.isEmpty());
+                        uploadFilesAsync(file_);
+                        sendFilenameAndModuleToDb(file_, module_title);
+                        setDataToAdapter(null);  //set empty data to adapter after sending data
+                        file_.clear(); //clear files chosen
+                        module_title = null; //clear selected modules
+
+                    }
+
                 }
             }
         });
@@ -174,12 +181,11 @@ public class AcademicFragment extends Fragment implements FilePickerCallback {
 
     @Override
     public void onFilesChosen(List<ChosenFile> files) {
-        filePath = new ArrayList<>();
-        filename = new ArrayList<>();
+        file_ = new ArrayList<>();
+
         for (ChosenFile file : files) {
             Log.d(TAG, "onFilesChosen: " + file);
-            filePath.add(file.getOriginalPath());
-            filename.add(file.getDisplayName());
+            file_.add(file);
         }
         setDataToAdapter(files);
     }
@@ -283,13 +289,13 @@ public class AcademicFragment extends Fragment implements FilePickerCallback {
         // bind the action (intentFilter) to the event (broadcast RXr)
         bm.registerReceiver(onEvent, f); // the broadcast receiver, the event ACTION_COMPLETE
     }
-    public void uploadFilesAsync(ArrayList<String> filepath){
+    public void uploadFilesAsync(ArrayList<ChosenFile> filepath){
 
         RequestParams params = new RequestParams();
 
-        for(int i=0;i<filepath.size();i++) {
+        for(final ChosenFile file: filepath) {
             try {
-                params.put("files[]", new File(filepath.get(i)));
+                params.put("files[]", new File(file.getOriginalPath()));
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -304,10 +310,11 @@ public class AcademicFragment extends Fragment implements FilePickerCallback {
                     Log.d("PERC","progress: "+(bytesWritten*100)/totalSize );
 
                     upload.setEnabled(false); // disable button
-                    Intent i = new Intent(getActivity(), UploadFileService.class);
-                    i.putExtra("progress_",(int)((bytesWritten*100)/totalSize));
-                    i.putExtra("progressing",1);
-                    getActivity().startService(i);
+                    Intent it = new Intent(getActivity(), UploadFileService.class);
+                    it.putExtra("progress_",(int)((bytesWritten*100)/totalSize));
+                    it.putExtra("filename",file.getDisplayName());
+                    it.putExtra("progressing",1);
+                    getActivity().startService(it);
 
                 }
 
@@ -315,27 +322,52 @@ public class AcademicFragment extends Fragment implements FilePickerCallback {
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                     Log.d("FILE_SUCCESS"," : "+statusCode);
                     //show complete status
-                    Intent i = new Intent(getActivity(), UploadFileService.class);
-                    i.putExtra("progress_",0);
-                    i.putExtra("progressing",0);
-                    getActivity().startService(i);
+                    Intent it1 = new Intent(getActivity(), UploadFileService.class);
+                    it1.putExtra("progress_",0);
+                    it1.putExtra("filename",file.getDisplayName());
+                    it1.putExtra("progressing",0);
+                    getActivity().startService(it1);
 
                     // inform the UI we are done
                     LocalBroadcastManager.getInstance(getContext()).sendBroadcast(new Intent(ACTION_COMPLETE));
                     Log.d(getClass().getName(), "Background thread finished: broadcast sent" );
+                    //delete uploaded file in the directory 'UAIS Documents' to free space
+                    new File(file.getOriginalPath()).delete();
                 }
 
                 @Override
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                     Log.d("FILE_SUCCESS"," : "+statusCode);
                     //show fail status
-                    Intent i = new Intent(getActivity(), UploadFileService.class);
-                    i.putExtra("progress_",0);
-                    i.putExtra("progressing",2);
-                    getActivity().startService(i);
+                    Intent it2 = new Intent(getActivity(), UploadFileService.class);
+                    it2.putExtra("progress_",0);
+                    it2.putExtra("filename",file.getDisplayName());
+                    it2.putExtra("progressing",2);
+                    getActivity().startService(it2);
                     // inform the UI we are done
                     LocalBroadcastManager.getInstance(getContext()).sendBroadcast(new Intent(ACTION_COMPLETE));
                     Log.d(getClass().getName(), "Background thread finished: broadcast sent" );
+                }
+            });
+        }
+    }
+    public void sendFilenameAndModuleToDb(ArrayList<ChosenFile> files, String moduleTitle){
+        RequestParams params = new RequestParams();
+
+        for(ChosenFile file : files){
+            params.put("filename",file.getDisplayName());
+            params.put("module",moduleTitle);
+
+            AsyncHttpClient client = new AsyncHttpClient();
+            client.post("http://www.uais.co.nf/mobile/stSendModuleAndFilenameAssignment.php", params, new AsyncHttpResponseHandler() {
+                @Override
+                public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                    Log.d(TAG,"success: "+statusCode);
+                }
+
+                @Override
+                public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                    Log.d(TAG,"fail: "+statusCode);
                 }
             });
         }

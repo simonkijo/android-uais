@@ -25,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="d6708863eb428461d7691d04d21a418765b7405a">
+        sha1="59c31f794fb1a18304512c85b0a42d0914bcd1fc">
         <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b832f0756def6d96d65c59b0700a1251ba1eda0f\classes.dex" />
     </item>
     <item
@@ -187,7 +187,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="45371e89dad5d892cc8538c898582ccd4c132b79">
+        sha1="bde36d698fac875f3f0594706b5427fd6d4119a9">
         <dex dex="D:\ap_uais\UAIS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_e9127b58bbfe6c1784adb086c21eb65c82a9219f\classes.dex" />
     </item>
     <item
